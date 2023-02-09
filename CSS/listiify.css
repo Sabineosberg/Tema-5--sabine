@@ -1,0 +1,383 @@
+/*---------------------HOME PAGE--------------------------*/
+
+/* FONT TEXT */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+html{
+    font-size: 16px;
+    font-family:'Inter', sans-serif;
+}
+
+/* HEADER */
+#logo{
+    font-family:'Inter', sans-serif;
+    font-size: 1.5rem;
+    color:#121313;
+    font-weight: bolder;
+}
+
+#logo a{
+    text-decoration: none;
+    color: #0E0E0F;
+}
+
+.header{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    height: 6rem;
+    text-decoration: none;
+    color:#0E0E0F;
+    align-items: center;
+    padding: 1rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+ul{
+    font-family:'Inter', sans-serif;
+    font-size:16px;
+    margin-right:20px;
+    list-style: none;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #0E0E0F;
+}
+
+#appBorder{
+    border-style:inset;
+    border-radius:100px;
+    border-width: 2px;
+    padding:10px;
+    padding-right:20px;
+    padding-left: 20px;
+    border-color:#48C8A4;
+}
+
+/* BACKGROUND IMG */
+body{
+    background-image: url('../ASSETS/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100%;
+    flex-flow: column nowrap;
+
+}
+
+/* MAIN CONTENT */
+h1{
+    margin-top: 124px;
+    margin-left: 80px;
+    font-size: 3rem;
+}
+
+#secondH1{
+    margin-top:-40px;
+}
+
+#secondH1Word{
+    color: #48C8A4;
+    margin-top:-90px;
+    margin-left: 220px;
+    font-size: 3rem;
+}
+
+#starsPicture{
+    margin-top: 49px;
+    margin-left: 75px;
+}
+#reviewText{
+    margin-top: 10px;
+    margin-left: 85px;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+#buttonStart{
+    background-color: #0E0E0F;
+    margin-top:55px;
+    margin-left:80px;
+    width: 206px;
+    height: 68px;
+    color: #FDFDFD;
+    font-family:'Inter', sans-serif;
+    font-size:20px;
+    border-radius: 10px;
+    border-color: #0E0E0F;
+}
+
+#tabletMockup{
+    margin-left:750px;
+    margin-top:-150px;
+    display:flex;
+
+}
+
+#mobileMockup{
+    margin-left:1090px;
+    margin-top:-310px;
+    display:flex;
+}
+
+/* QUOTE SECTION */
+.h2Section{
+    background-color: #FDFDFD;
+    padding: 50px;
+    margin-top:150px;
+    margin-bottom:100px;
+}
+
+/* SCROLLING DOWN ON PAGE */
+h2{
+    margin-left: 400px;
+    background-color: #FDFDFD;
+    font-size: 1.5rem;
+}
+
+.titleH3{
+    margin-top: 150px;
+    margin-left: 960px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.basicText{
+    margin-top: -25px;
+    margin-left: 1025px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#arrowImg{
+    margin-top: 10px;
+    margin-left: 860px;
+}
+
+/* GROCERY LIST */
+.groceries{
+    border: 20px solid #0E0E0F;
+    border-radius: 70px;
+    width: 580px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top:20px;
+    min-height:85vh;
+    margin-left:70px;
+    margin-top: -380px;
+    margin-bottom: 100px;
+    background-color:#FDFDFD;
+    box-shadow:10px 10px 24px 0 rgba(0, 0, 0, 0.5);
+}
+
+.groceries i{
+    font-size: 2rem;
+    color: yellow;
+}
+
+.groceries input{
+    padding-top:30px;
+    font-family: inherit;
+    outline: 0;
+    border: 0;
+    border-bottom: 3px solid #0E0E0F;
+    background-color: #FDFDFD;
+    margin-left: 30px;
+    width: 55%;
+    font-size: 1.5rem;
+}
+
+#pencil{
+    margin-left:-70px;
+    padding-left:-30px;
+    margin-top:25px;
+}
+
+#allItems{
+margin-left: 150px;
+margin-right:10px;
+margin-top:40px;
+font-size:1.5rem;
+}
+
+#add{
+    margin-left:590px;
+    margin-top:-720px;
+    width: 106px;
+    border-color: #FFC656;
+    background-color: #FFC656;
+    height: 68px;
+    color: #0E0E0F;
+    font-family:'Inter', sans-serif;
+    font-size:20px;
+    border-radius: 10px;
+}
+
+.checkBox{
+    margin-left:-270px;
+    height:30px;
+}
+
+.checkBox:checked + #allItems{
+    background: grey;
+    text-decoration: line-through;
+}
+
+#deleteButton{
+    margin-left:300px;
+    margin-top:200px;
+    width: 150px;
+    border-color: #FF9056;
+    background-color: #FF9056;
+    height: 68px;
+    color: #0E0E0F;
+    font-family:'Inter', sans-serif;
+    font-size:20px;
+    border-radius: 10px;
+}
+
+
+
+
+/* FOOTER */
+footer{
+    background-color: #0E0E0F;
+    color: #FDFDFD;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    width: 100%;
+    margin-top:800px;
+}
+
+footer p{
+    text-align: center;
+    margin-left: -30px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+  
+footer h1{
+    font-size: 20px;
+    margin-left: 110px;
+    margin-top:30px;
+}
+
+.containerFooter{
+    display: flex;
+    gap: 100px;
+    padding: 100px 20px;
+}
+  
+.service{
+    margin-left:55px;
+}
+  
+.service ul{
+    list-style-type: none;
+    line-height: 1.8;
+    font-size: 14px;
+}
+  
+.legal{
+    flex-grow: 1;
+    flex-basis: 100%;
+    margin-left:300px;
+}
+  
+.legal ul{
+    list-style-type: none;
+    line-height: 1.8;
+    font-size: 14px;
+    cursor: pointer;
+}
+  
+.contact{
+    flex-grow: 1;
+    flex-basis: 100%;
+    margin-left: 80px;
+}
+  
+.contact ul{
+    list-style-type: none;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/*--------------------ABOUT PAGE----------------------*/
+
+.aboutTitle{
+    margin-top: 124px;
+    margin-left: 830px;
+    font-size: 3rem;
+    margin-top: 60px;
+}
+.aboutTitle2{
+    margin-left: 830px;
+    font-size: 3rem;
+    margin-top: 5px;
+}
+
+#aboutImg{
+    margin-left: 730px;
+    margin-top: 50px;
+    border-radius: 20px;
+    margin-bottom: 50PX;
+}
+
+.bodyAboutPage{
+    background-color: #FDFDFD;
+}
+
+.titleLayer{
+    margin-top: -120px;
+    margin-left: 110px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.titleLayerSecond{
+    margin-top: -30px;
+    margin-left: 110px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.smallTextAbout{
+    margin-top: -200px;
+    
+}
+
+#buttonAbout{
+    background-color: #0E0E0F;
+    margin-top:0px;
+    margin-left:80px;
+    width: 206px;
+    height: 68px;
+    color: #FDFDFD;
+    font-family:'Inter', sans-serif;
+    font-size:20px;
+    border-radius: 10px;
+    border-color: #0E0E0F;
+}
+/*--------------------MOBILE VERSION----------------------*/
+
+
+
+
+
+    
