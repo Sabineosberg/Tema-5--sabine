@@ -10,6 +10,10 @@ const deleteElement= document.getElementById('deleteButton');
 addButton.addEventListener('click', addGrocery);
 deleteElement.addEventListener('click', deleteFunction);
 
+function deleteFunction(){
+    resultBox.innerHTML="";
+}
+
 
 // Accessibility krav: navigasjon med tastatur (add-button)
 window.addEventListener('keyup', (add) => {
@@ -23,28 +27,41 @@ function addGrocery(){
     
 
     if(inputElement.value !== ''){
-        const checkBox = document.createElement('input');
-        console.log(checkBox)
-        checkBox.setAttribute('type', 'checkbox');
-        //checkBox.classList.add('checkBox');
-        liElement.appendChild(checkBox);
+        
     
 
     liElement.textContent = "- " + inputElement.value;
-    resultBox.appendChild(liElement);
+    
 
     liElement.addEventListener('click', function(){
         liElement.style.textDecoration= "line-through";
     })
+
+    const checkBox = document.createElement('input');
+        console.log(checkBox)
+        checkBox.setAttribute('type', 'checkbox');
+        //checkBox.classList.add('checkBox');
+        liElement.prepend(checkBox);
+
+    const btn = document.createElement('button');
+    const imgDelete = document.createElement('img');
+    imgDelete.setAttribute('src', './ASSETS/garbage.png');
+    btn.appendChild(imgDelete)
+    liElement.appendChild(imgDelete)
+
     
     //resultBox.insertAdjacentElement("beforeend", liElement);
     inputElement.value= "";
+    resultBox.appendChild(liElement);
+
+    btn.addEventListener('click', () => {
+        resultBox.removeChild(liElement)
+    })
+    
     }
 };
 
-function deleteFunction(){
-    resultBox.innerHTML="";
-}
+
 }
 
 
@@ -53,8 +70,8 @@ initGroceryList();
 
 
 // Create checkbox og søppelkasse når jeg legger inn fra inputElement. 
-let checkBox= document.createElement('p');
-checkBox
+/* let checkBox= document.createElement('p');
+checkBox */
 // Når jeg krysser av checkbox, kommer det linethrough
 
 // Slette hver og en når jeg trykker på søppelkasse
