@@ -9,6 +9,16 @@ function initGroceryList() {
     const buttonStart = document.getElementById('buttonStart');
     const groceryListContainer = document.querySelector('.groceries');
 
+    //initialize tasks array
+    let tasks = [];
+    if(localStorage.getItem('tasks')) {
+        tasks = JSON.parse(localStorage.getItem('tasks'));
+        tasks.forEach(item => {
+            renderListItem(item) 
+        })
+    }
+    
+
     // Scrolling down to Grocery list, when cliking on the button
     buttonStart.addEventListener('click', () => {
         groceryListContainer.scrollIntoView({ behavior: 'smooth'});
@@ -30,6 +40,9 @@ function initGroceryList() {
     function deleteAll() {
         // Remove all the content from the result box
         resultBox.textContent= '';
+        // Clear tasks array and remove from local storage
+        tasks = [];
+        localStorage.removeItem('tasks');
     }
 
     // Function that listens to the 'Add' button and adds an item to the grocery list
@@ -40,10 +53,20 @@ function initGroceryList() {
         // If no value is entered, return without doing anything
         if (itemValue === '') return;
         
+        // add item value to task and localstorage
+        tasks.push(itemValue);
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        renderListItem(itemValue)
+
+        // Reset the input value
+        inputElement.value = '';  
+    }
+
+    function renderListItem(itemValue) {
         // Create a list item to hold the value and other elements
         const item = document.createElement('li');
         item.textContent = itemValue;
-    
+
         // Create a checkbox element
         const checkBox = document.createElement('input');
 
@@ -51,15 +74,7 @@ function initGroceryList() {
         checkBox.type = 'checkbox';
 
         // Style the checkbox
-        checkBox.style.width = '25px';
-        checkBox.style.height = '25px';
-        checkBox.style.marginRight = '25px';
-        checkBox.style.appearance = 'none'; // Remove the default appearance of the checkbox
-        checkBox.style.border = '3px solid black'; // Add a black border
-        checkBox.style.borderRadius = '4px'; // Give the checkbox rounded corners
-        checkBox.style.outline = 'none'; // Remove the outline when the checkbox is clicked
-        checkBox.style.cursor = 'pointer'; // Change the cursor to a pointer when the mouse is over the checkbox
-        checkBox.style.backgroundSize = 'contain'; // Make the bckground image fit within the checkbox
+        checkBox.classList.add('checkbox-li');
 
         // Add a change event listener to the checkbox
         checkBox.addEventListener('change', function() {
@@ -80,20 +95,11 @@ function initGroceryList() {
         // Create a trash button
         const deleteButton = document.createElement('button');
 
-        // Create an image for the trash button
-        const deleteIcon = document.createElement('img');
-        // Get image from files
-        deleteIcon.src = './ASSETS/garbage.png';
-        // Add the delete icon to the delete button
-        deleteButton.appendChild(deleteIcon);
-        // Add the delete button to the list item
         item.appendChild(deleteButton);
 
         // For styling the trash button in CSS
         deleteButton.classList.add('delete-button');      
 
-        // Reset the input value
-        inputElement.value= '';
         // Add the list item to the result box
         resultBox.appendChild(item);
         
@@ -110,13 +116,24 @@ function initGroceryList() {
                 }
             }
         });
-            
+
         // Listen to the trash btton - when clicked, remove the item from the list
         deleteButton.addEventListener('click', (event) => {
+            // Get the index of the item in the tasks array
+            const index = tasks.indexOf(item.textContent);
+
+            // Remove the item from the tasks array
+            tasks.splice(index, 1);
+
+            // Remove the item from the result box
             resultBox.removeChild(item);
+
+            // Update the tasks array in local storage
+            localStorage.setItem('tasks', JSON.stringify(tasks));
         });
     }
 }
+
 
 // Call the initGroceryList function to start the application
 initGroceryList();

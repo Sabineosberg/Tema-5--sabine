@@ -5,7 +5,7 @@
 
 html {
     /* Set the default font size to 16px */
-    font-size: 16px;
+    font-size: 100%;
     /* Set the default font family to the Inter font */
     font-family:'Inter', sans-serif;
 }
@@ -266,7 +266,7 @@ h2 {
 /* Style of the add button */
 #add {
     position: absolute;
-    top: 1099px;px;
+    top: 1099px;
     left:510px;
     width: 85px;
     border-color: #FFC656;
@@ -300,12 +300,31 @@ h2 {
 
 /* Style of the trash button in grocery list */
 .delete-button {
+    display: inline-block;
     color: #FDFDFD;
-    width: 100px;
+    width: 40px;
+    height: 48px;
+    background-color: transparent;
+    border: 0;
     margin-left: 240px;
     margin-top: 25px;
     border-color: #FDFDFD;
     cursor: pointer;
+    background-image: url(../ASSETS/Vector.svg);
+}
+
+/* Style of the checkbox */
+.checkbox-li {
+    width: 25px;
+    height: 25px;
+    margin-right: 25px;
+    appearance: none; /* Remove the default appearance of the checkbox */
+    border: 3px solid black; /* Add a black border */
+    border-radius: 4px; /* Give the checkbox rounded corners */
+    outline: none; /* Remove the outline when the checkbox is clicked */
+    cursor: pointer; /* Change the cursor to a pointer when the mouse is over the checkbox */
+    background-size: contain; /* Make the bckground image fit within the checkbox */
+
 }
 
 /* Footer section */
@@ -457,7 +476,7 @@ footer h1 {
     }
     #deleteAllButton {
         width: 150px;
-        margin-left: -75px;
+        margin-left: -110px;
         margin-top: 180px;
     }
     #add {
@@ -466,7 +485,19 @@ footer h1 {
         margin-top: 230px;
     }
     #allItems {
-        margin-left: -70px;
+        margin-left: -90px;
+        position: absolute;
+        max-height: 450px;
+        max-width: 450px;
+        overflow: auto;
+        top: 1295px;
+    }
+    .checkbox-li {
+        margin-top: 250px;
+    }
+
+    li {
+        max-height: 100px;
     }
 }
 
