@@ -490,9 +490,14 @@ footer h1 {
         max-height: 450px;
         max-width: 450px;
         overflow: auto;
+        top: 1295px;
     }
     .checkbox-li {
         margin-top: 250px;
+    }
+
+    li {
+        max-height: 100px;
     }
 }
 
