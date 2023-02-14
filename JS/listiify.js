@@ -9,6 +9,16 @@ function initGroceryList() {
     const buttonStart = document.getElementById('buttonStart');
     const groceryListContainer = document.querySelector('.groceries');
 
+    //initialize tasks array
+    let tasks = [];
+    if(localStorage.getItem('tasks')) {
+        tasks = JSON.parse(localStorage.getItem('tasks'));
+        tasks.forEach(item => {
+            renderListItem(item) 
+        })
+    }
+    
+
     // Scrolling down to Grocery list, when cliking on the button
     buttonStart.addEventListener('click', () => {
         groceryListContainer.scrollIntoView({ behavior: 'smooth'});
@@ -40,10 +50,18 @@ function initGroceryList() {
         // If no value is entered, return without doing anything
         if (itemValue === '') return;
         
+        // add item value to task and localstorage
+        tasks.push(itemValue);
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        renderListItem(itemValue)
+        
+    }
+
+    function renderListItem(itemValue) {
         // Create a list item to hold the value and other elements
         const item = document.createElement('li');
         item.textContent = itemValue;
-    
+
         // Create a checkbox element
         const checkBox = document.createElement('input');
 
@@ -51,6 +69,7 @@ function initGroceryList() {
         checkBox.type = 'checkbox';
 
         // Style the checkbox
+        // checkbox.classList.add('checkbox-li')
         checkBox.style.width = '25px';
         checkBox.style.height = '25px';
         checkBox.style.marginRight = '25px';
@@ -114,9 +133,13 @@ function initGroceryList() {
         // Listen to the trash btton - when clicked, remove the item from the list
         deleteButton.addEventListener('click', (event) => {
             resultBox.removeChild(item);
+            // remove from tasks array and localstorage
+            console.log(tasks)
         });
     }
+
 }
+
 
 // Call the initGroceryList function to start the application
 initGroceryList();
