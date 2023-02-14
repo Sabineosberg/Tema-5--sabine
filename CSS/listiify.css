@@ -1,66 +1,80 @@
 /*---------------------HOME PAGE--------------------------*/
 
-/* FONT TEXT */
+/* Import the Inter font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-html{
+html {
+    /* Set the default font size to 16px */
     font-size: 16px;
+    /* Set the default font family to the Inter font */
     font-family:'Inter', sans-serif;
 }
 
-/* HEADER */
-#logo{
+/* Set the logo text style */
+#logo {
     font-family:'Inter', sans-serif;
     font-size: 1.5rem;
     color:#121313;
     font-weight: bolder;
 }
 
-#logo a{
+/* Remove the underline on the logo text */
+#logo a {
     text-decoration: none;
     color: #0E0E0F;
 }
 
-.header{
-    display:flex;
+/* Style the header container */
+.header {
+    display:flex; /* Use flexbox to align and distribute items within the header */
     flex-direction: row;
     justify-content:space-between;
     height: 6rem;
-    text-decoration: none;
+    text-decoration: none; /* Remove the underline on the header links */
     color:#0E0E0F;
-    align-items: center;
-    padding: 1rem;
-    margin-left: 5%;
+    align-items: center; /* Center the items within the header */
+    padding: 1rem; /* Add padding to the header */
+    /* Add margin to the left and right sides of the header */
+    margin-left: 5%; 
     margin-right: 5%;
 }
 
-ul{
+/* Style the unordered list of links in the header */
+ul {
     font-family:'Inter', sans-serif;
     font-size:16px;
+    /* Add margin to the right side of the list of links */
     margin-right:20px;
+    /* Remove the default list styling */
     list-style: none;
 }
 
-nav{
+/* Style the navigation container */
+nav {
+    /* Set the width of the navigation container to 100% of the viewport */
     width: 100%;
+    /* Use flexbox to align and distribute items within the navigation container */
     display: flex;
+    /* Center the items within the navigation container */
     align-items: center;
+    /* Space out the items within the navigation container */
     justify-content: space-between;
+    /* Add padding to the top and bottom of the navigation container */
     padding: 20px 0;
 }
 
-nav ul li{
+/* Style each list item within the unordered list of links */
+nav ul li {
+    /* Display each list item as an inline block */
     display: inline-block;
+    /* Remove the default list styling */
     list-style: none;
+    /* Add margin to the top and bottom of each list item */
     margin: 10px 30px;
 }
 
-nav ul li a{
-    text-decoration: none;
-    color: #0E0E0F;
-}
-
-#appBorder{
+/* Style the app border */
+#appBorder {
     border-style:inset;
     border-radius:100px;
     border-width: 2px;
@@ -70,47 +84,68 @@ nav ul li a{
     border-color:#48C8A4;
 }
 
-/* BACKGROUND IMG */
-body{
+/* Body styles */
+body {
+    /* Set the background image */
     background-image: url('../ASSETS/background.jpg');
+    /* Set the background image to cover the entire body */
     background-size: cover;
+    /* Don't repeat the background image */
     background-repeat: no-repeat;
+    /* Use flexbox layout */
     display: flex;
+    /* Set the width of the body to 100% */
     width: 100%;
+    /* Set the flex-flow direction to column and the wrapping to nowrap */
     flex-flow: column nowrap;
 
 }
 
-/* MAIN CONTENT */
-h1{
+/* Main content styles */
+h1 {
+    /* Set the top margin of the h1 to 124px */
     margin-top: 124px;
+    /* Set the left margin of the h1 to 80px */
     margin-left: 80px;
+    /* Set the font size of the h1 to 3rem */
     font-size: 3rem;
 }
 
-#secondH1{
-    margin-top:-40px;
+/* Title - in the same text as h1 */
+#secondH1 {
+    /* Set the top margin of the second h1 to -40px */
+    margin-top:-5px;
 }
 
-#secondH1Word{
+/* Word with a different color in the second h1 text */
+#secondH1Word {
+    /* Set the color of the text */
     color: #48C8A4;
-    margin-top:-90px;
+    /* Set the top margin of the text */
+    margin-top:-59px;
+    /* Set the left margin of the text */
     margin-left: 220px;
+    /* Set the font size of the text to 3rem */
     font-size: 3rem;
 }
 
-#starsPicture{
+/* Png of stars (reviews) */
+#starsPicture {
     margin-top: 49px;
     margin-left: 75px;
 }
-#reviewText{
+
+/* Small review text- Shopify and Appstore */
+#reviewText {
     margin-top: 10px;
     margin-left: 85px;
+    /* Set the font-weight of the reviewText */
     font-weight: bolder;
     font-size: 1rem;
 }
 
-#buttonStart{
+/* Black button at home page */
+#buttonStart {
     background-color: #0E0E0F;
     margin-top:55px;
     margin-left:80px;
@@ -123,55 +158,59 @@ h1{
     border-color: #0E0E0F;
 }
 
-#tabletMockup{
+/* Mockup img of tablet */
+#tabletMockup {
     margin-left:750px;
     margin-top:-150px;
     display:flex;
 
 }
 
-#mobileMockup{
+/* Mockup img of iphone */
+#mobileMockup {
     margin-left:1090px;
     margin-top:-310px;
     display:flex;
 }
 
-/* QUOTE SECTION */
-.h2Section{
+/* Quote section */
+.h2Section {
     background-color: #FDFDFD;
     padding: 50px;
     margin-top:150px;
     margin-bottom:100px;
 }
 
-/* SCROLLING DOWN ON PAGE */
-h2{
+/* h2 text- quote */
+h2 {
     margin-left: 400px;
     background-color: #FDFDFD;
     font-size: 1.5rem;
 }
 
-.titleH3{
+/* Title 1 next to the grocery list */
+.title1 {
     margin-top: 150px;
     margin-left: 960px;
     font-size: 2rem;
     font-weight: bold;
 }
 
-.basicText{
-    margin-top: -25px;
+/* Title 2 next to the grocery list */
+.title2 {
     margin-left: 1025px;
     font-size: 2rem;
     font-weight: bold;
 }
 
+/* Arrow img next to the grocery list */
 #arrowImg{
     margin-top: 10px;
     margin-left: 860px;
 }
 
-/* GROCERY LIST */
-.groceries{
+/* Grocery section */
+.groceries {
     border: 20px solid #0E0E0F;
     border-radius: 70px;
     width: 580px;
@@ -186,12 +225,8 @@ h2{
     box-shadow:10px 10px 24px 0 rgba(0, 0, 0, 0.5);
 }
 
-.groceries i{
-    font-size: 2rem;
-    color: yellow;
-}
-
-.groceries input{
+/* Style of the input felt */
+.groceries input {
     padding-top:30px;
     font-family: inherit;
     outline: 0;
@@ -203,178 +238,241 @@ h2{
     font-size: 1.5rem;
 }
 
-#pencil{
-    margin-left:-70px;
+/* Style of the pencil img */
+#pencil {
+    margin-left:-99px;
+    margin-right: 10px;
     padding-left:-30px;
     margin-top:25px;
 }
 
-#allItems{
-margin-left: 150px;
-margin-right:10px;
-margin-top:40px;
-font-size:1.5rem;
+/* Style of the unordered list that shows up when user types a grocery */
+#allItems {
+    /* The position property specifies the positioning method for the element */
+    position: absolute;
+    /* The distance from the top of the parent container */
+    top:1205px;
+     /* The distance from the left of the parent container */
+    left: 160px;
+    font-size:1.5rem;
+     /* The maximum height of the element */
+    max-height: 450px;
+     /* The maximum width of the element */
+    max-width: 450px;
+     /* What to do if the content inside the element overflows */
+    overflow: auto;
 }
 
-#add{
-    margin-left:590px;
-    margin-top:-720px;
-    width: 106px;
+/* Style of the add button */
+#add {
+    position: absolute;
+    top: 1099px;px;
+    left:510px;
+    width: 85px;
     border-color: #FFC656;
     background-color: #FFC656;
-    height: 68px;
+    height: 55px;
     color: #0E0E0F;
     font-family:'Inter', sans-serif;
     font-size:20px;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
-.checkBox{
-    margin-left:-270px;
-    height:30px;
+/* Style of the input in the grocery list */
+#userInput {
+    margin-left: 10px;
 }
 
-.checkBox:checked + #allItems{
-    background: grey;
-    text-decoration: line-through;
-}
-
-#deleteButton{
-    margin-left:300px;
-    margin-top:200px;
-    width: 150px;
+/* Style of the 'Delete all' button */
+#deleteAllButton {
+    position: absolute;
+    top:1720px;
+    left: 285px;
+    width: 130px;
     border-color: #FF9056;
     background-color: #FF9056;
-    height: 68px;
+    height: 60px;
     color: #0E0E0F;
     font-family:'Inter', sans-serif;
     font-size:20px;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
+/* Style of the trash button in grocery list */
+.delete-button {
+    color: #FDFDFD;
+    width: 100px;
+    margin-left: 240px;
+    margin-top: 25px;
+    border-color: #FDFDFD;
+    cursor: pointer;
+}
 
-
-
-/* FOOTER */
-footer{
+/* Footer section */
+footer {
     background-color: #0E0E0F;
     color: #FDFDFD;
     display: flex;
     flex-direction: column;
     bottom: 0;
     width: 100%;
-    margin-top:800px;
+    margin-top:100px;
 }
 
-footer p{
+/* Style of the 'p' text in footer */
+footer p {
     text-align: center;
     margin-left: -30px;
     font-size: 12px;
     margin-bottom: 10px;
 }
-  
-footer h1{
+
+/* Style of the Listiify logo in footer */
+footer h1 {
     font-size: 20px;
-    margin-left: 110px;
+    margin-left: 75px;
     margin-top:30px;
 }
 
-.containerFooter{
+/* Style of the container for the footer content */
+.containerFooter {
     display: flex;
     gap: 100px;
     padding: 100px 20px;
 }
-  
-.service{
+
+/* Service section in footer */
+.service {
     margin-left:55px;
 }
-  
-.service ul{
+
+/* Style of unordered list of service links */
+.service ul {
     list-style-type: none;
     line-height: 1.8;
     font-size: 14px;
 }
-  
-.legal{
+
+/* Legal section in footer */
+.legal {
     flex-grow: 1;
     flex-basis: 100%;
     margin-left:300px;
 }
-  
-.legal ul{
+
+/* Style of unordered list of legal information */
+.legal ul {
     list-style-type: none;
     line-height: 1.8;
     font-size: 14px;
     cursor: pointer;
 }
-  
-.contact{
+
+/* Contact section in footer */
+.contact {
     flex-grow: 1;
     flex-basis: 100%;
     margin-left: 80px;
 }
-  
-.contact ul{
+ 
+/* Style of unordered list of contact information */
+.contact ul {
     list-style-type: none;
     line-height: 1.8;
     font-size: 14px;
 }
 
-/*--------------------ABOUT PAGE----------------------*/
-
-.aboutTitle{
-    margin-top: 124px;
-    margin-left: 830px;
-    font-size: 3rem;
-    margin-top: 60px;
-}
-.aboutTitle2{
-    margin-left: 830px;
-    font-size: 3rem;
-    margin-top: 5px;
-}
-
-#aboutImg{
-    margin-left: 730px;
-    margin-top: 50px;
-    border-radius: 20px;
-    margin-bottom: 50PX;
-}
-
-.bodyAboutPage{
-    background-color: #FDFDFD;
-}
-
-.titleLayer{
-    margin-top: -120px;
-    margin-left: 110px;
-    font-size: 2rem;
-    font-weight: bold;
-}
-.titleLayerSecond{
-    margin-top: -30px;
-    margin-left: 110px;
-    font-size: 2rem;
-    font-weight: bold;
-}
-.smallTextAbout{
-    margin-top: -200px;
-    
-}
-
-#buttonAbout{
-    background-color: #0E0E0F;
-    margin-top:0px;
-    margin-left:80px;
-    width: 206px;
-    height: 68px;
-    color: #FDFDFD;
-    font-family:'Inter', sans-serif;
-    font-size:20px;
-    border-radius: 10px;
-    border-color: #0E0E0F;
-}
 /*--------------------MOBILE VERSION----------------------*/
+/* Responsive design for mobile screen size */
+@media only screen and (max-width: 700px) {
+    .header {
+        flex-direction: column;
+    }
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+    }
+    nav ul {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+    html {
+        font-size: 15px; 
+    }
+    .h2Section {
+        font-size: 15px; 
+        margin-left: -380px;
+    }
+    #secondH1Word {
+        margin-left: 210px;
+        margin-top: -55px;
+        
+    }
+    footer {
+        width: 100%;
+        display: flex;
+        padding: 20px 0;
+        margin-top: 300px;
+    }
+    footer h1 {
+        margin-left: 50px;
+    }
+    .service {
+        margin-left: 30px;
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    .legal {
+        margin-left: -40px;
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    .contact {
+        margin-left: -69px;
+        font-size: 10px;
+    }
+    .groceries {
+        margin-left: 10px;
+        width: 480px;
+        margin-top: -550px;
+    }
+    #buttonStart {
+        width: 140px;
+        height: 58px;
+        font-size: 16px;
+    }
+    #tabletMockup {
+        width: 200px;
+        margin-left: 80px;
+        margin-top: 200px;
+    }
+    #mobileMockup {
+        width: 200px;
+        margin-left: 290px;
+        margin-top: -175px;
+    }
+    #deleteAllButton {
+        width: 150px;
+        margin-left: -75px;
+        margin-top: 180px;
+    }
+    #add {
+        width: 70px;
+        margin-left: -145px;
+        margin-top: 230px;
+    }
+    #allItems {
+        margin-left: -70px;
+    }
+}
+
+
+
+
 
 
 
